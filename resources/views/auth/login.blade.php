@@ -32,6 +32,16 @@
                         <x-input.input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
+                    <!-- Forgot Password -->
+                    <div class="flex items-center justify-between mt-4">
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="underline text-sm text-gray-600 hover:text-gray-900">
+                                {{ __('Lupa kata sandi Anda?') }}
+                            </a>
+                        @endif
+                    </div>
+
+
                     <!-- Remember Me -->
                     <div class="mt-4">
                         <x-input.input-label for="remember" class="label cursor-pointer mr-3">
